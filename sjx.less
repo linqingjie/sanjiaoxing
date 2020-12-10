@@ -1,0 +1,60 @@
+@t:top;
+@b:bottom;
+@l:left;
+@r:right;
+@red:red;
+@skyblue: skyblue;
+.top(@max, @min, @color) {
+    border-@{t}:@max solid @color;
+    border-@{l}:@min solid transparent;
+    border-@{r}:@min solid transparent;
+}
+.bottom(@max, @min, @color){
+    border-@{b}:@max solid @color;
+    border-@{l}:@min solid transparent;
+    border-@{r}:@min solid transparent;
+}
+.left(@max, @min, @color){
+    border-@{l}:@max solid @color;
+    border-@{t}:@min solid transparent;
+    border-@{b}:@min solid transparent;
+}
+.right(@max, @min, @color){
+    border-@{r}:@max solid @color;
+    border-@{t}:@min solid transparent;
+    border-@{b}:@min solid transparent;
+}
+li{
+    width: 0;
+    height: 0;
+    margin: 0 10px;
+}
+ul {
+   list-style: none; 
+   display: flex;
+}
+
+ul li:nth-child(1) {
+    .top(100px,50px,red);
+}
+ul li:nth-child(2) {
+    .top(80px,40px,red);
+}
+ul li:nth-child(3) {
+    .bottom(100px,50px,pink);
+}
+ul li:nth-child(4) {
+    .bottom(80px, 40px, pink);
+}
+ul li:nth-child(5) {
+    .left(100px,50px,green);
+}
+ul li:nth-child(6) {
+    .left(80px,40px,green);
+}
+ul li:nth-child(7) {
+    .right(100px,50px,yellow);
+}
+ul li:nth-child(8) {
+    .right(80px, 40px, yellow);
+}

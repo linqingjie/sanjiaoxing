@@ -1,0 +1,80 @@
+.box {
+  width: 500px;
+  height: 200px;
+  background: url("../zp.jpg") no-repeat center center / 100% auto;
+}
+div p {
+  width: 100%;
+  height: 200px;
+  color: snow;
+}
+div p::after {
+  content: "你好";
+  color: white;
+}
+div p::before {
+  content: "不好";
+  color: #ff0000;
+}
+span {
+  list-style: none;
+  font-size: 1px;
+}
+ul li {
+  background-color: skyblue;
+  height: 50px;
+}
+ul li:hover {
+  background-color: pink;
+  font-size: 50px;
+}
+father {
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+  display: block;
+}
+father son {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: slateblue;
+}
+.grandFath father son {
+  width: 50px;
+  height: 50px;
+}
+.bui,
+.bui1,
+.bui2 {
+  height: 200px;
+  width: 200px;
+}
+.bui1 {
+  background-color: #ff0000;
+}
+.bui2 {
+  background-color: pink;
+}
+.minx {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.no {
+  list-style: none;
+}
+.no li {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+li:nth-child(1) {
+  background-color: pink;
+}
+li:nth-child(2) {
+  background-color: yellow;
+}
+li:nth-child(3) {
+  background-color: blue;
+}

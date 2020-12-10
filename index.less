@@ -1,0 +1,92 @@
+@w:200px+300;
+@h:100px+100;
+@img:"../zp.jpg";
+@color:#FF0000-#00dd00;
+.box{
+    width:@w;
+    height:@h;
+    background: url("@{img}") no-repeat center center/100% auto;
+}
+div{
+    p{
+        width: 100%;
+        height: 200px;
+        color: snow;
+    }
+}
+div p::after{
+    content: "你好";
+    color: white;
+}
+div p::before{
+    content: "不好";
+    color: @color;
+}
+span{
+    list-style: none;
+    font-size: 1px;
+}
+ul{
+    li{
+        background-color: skyblue;
+        height: 50px;
+        &:hover{
+            background-color: pink;
+            font-size: 50px;
+        }
+    }
+}
+father{
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    display:   block;
+    son{
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: slateblue;
+        .grandFath &{
+            width: 50px;
+            height: 50px;
+        }
+    }
+} 
+.bui {
+    height: 200px;
+    width: 200px;
+}
+
+.bui1:extend(.bui) {
+    background-color: #ff0000;
+}
+
+.bui2:extend(.bui) {
+    background-color: pink;
+}
+.minx{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.color_(@color1){
+    background-color:@color1 ;
+}
+.no{
+    list-style: none;
+    li{
+       .minx;
+    }
+}
+li:nth-child(1){
+    .color_(pink)
+}
+li:nth-child(2){
+    .color_(yellow)
+}
+li:nth-child(3){
+    .color_(blue)
+}
+.digui(@index) when(@index<6){
+    
+}
